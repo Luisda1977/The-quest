@@ -5,5 +5,5 @@ Juego The Quest (con pygame)
 2. Crear y activar entorno virtual; 
     2.1 python -m venv env (env = nombre del entorno virtual) 
     2.2.1 .\env\Scripts\activate (Windows)
-    2.2.2 source ./env/bin/activate (Linux / Mac0s)
-3. Instalar librería pygame; pip install pygame
+    2.2.2 source ./env/bin/activate (Linux / MacOs)
+3. Instalación del entorno; pip install -r requeriments.txt
