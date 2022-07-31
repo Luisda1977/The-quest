@@ -7,6 +7,7 @@ class the_quest:
         print("Comienza el juego")
         pg.init()
         self.display = pg.display.set_mode((ANCHO, ALTO))
+        pg.display.set_caption("The Quest")
 
     def jugar(self):
         salir = False
