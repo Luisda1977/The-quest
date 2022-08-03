@@ -1,7 +1,11 @@
+import os
+
 import pygame as pg
 
+from . import ANCHO, ALTO
+
 class Escena:
-    def __init__(self, pantalla):
+    def __init__(self, pantalla: pg.Surface):
         self.pantalla = pantalla
 
     def bucle_principal(self):
@@ -9,6 +13,9 @@ class Escena:
 
 
 class Portada(Escena):
+    def __init__(self, pantalla: pg.Surface):
+       super().__init__(pantalla)  
+
     def bucle_principal(self):
      salir = False
      while not salir:
@@ -16,7 +23,11 @@ class Portada(Escena):
             if event.type == pg.QUIT:
                 salir = True
         self.pantalla.fill((99, 99, 99))
+        self.pintar_titulo()
         pg.display.flip()
+
+    def pintar_titulo(self):
+        pos_x = 
 
 
 class Partidaone(Escena):

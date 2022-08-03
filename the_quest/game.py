@@ -1,3 +1,5 @@
+import os
+
 import pygame as pg
 
 from the_quest import ALTO, ANCHO
@@ -18,6 +20,6 @@ class the_quest:
         ]
 
     def jugar(self):
-        for escenas in self.escenas:
-            escenas.bucle_principal()
+        for escena in self.escenas:
+            escena.bucle_principal()
 
