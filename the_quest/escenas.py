@@ -30,7 +30,7 @@ class Portada(Escena):
         pos_x = 
 
 
-class Partidaone(Escena):
+class Levelone(Escena):
     def bucle_principal(self):
      salir = False
      while not salir:
@@ -41,7 +41,7 @@ class Partidaone(Escena):
         pg.display.flip()
 
 
-class Partidatwo(Escena):
+class Leveltwo(Escena):
     def bucle_principal(self):
      salir = False
      while not salir:

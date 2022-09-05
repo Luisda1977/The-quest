@@ -3,7 +3,7 @@ import os
 import pygame as pg
 
 from the_quest import ALTO, ANCHO
-from the_quest.escenas import Portada, Partidaone, Partidatwo, Records
+from the_quest.escenas import Portada, Levelone, Leveltwo, Records
 
 class the_quest:
     def __init__(self) -> None:
@@ -14,8 +14,8 @@ class the_quest:
 
         self.escenas = [
             Portada(self.display),
-            Partidaone(self.display),
-            Partidatwo(self.display),
+            Levelone(self.display),
+            Leveltwo(self.display),
             Records(self.display)
         ]
 
