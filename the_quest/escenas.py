@@ -31,8 +31,7 @@ class Portada(Escena):
                     salir = True
 
             if event.type == pg.QUIT:
-                salir = True
-
+                pg.quit()
         self.pantalla.fill((99, 99, 99))
         self.pintar_titulo()
         self.pintar_instrucciones()
@@ -61,7 +60,7 @@ class Levelone(Escena):
      while not salir:
         for event in pg.event.get():
             if event.type == pg.QUIT:
-                salir = True
+                pg.quit()
         self.pantalla.fill((99, 99, 00))
         pg.display.flip()
 
@@ -72,7 +71,7 @@ class Leveltwo(Escena):
      while not salir:
         for event in pg.event.get():
             if event.type == pg.QUIT:
-                salir = True
+                pg.quit()
         self.pantalla.fill((99, 00, 99))
         pg.display.flip()
 
@@ -83,6 +82,6 @@ class Records(Escena):
      while not salir:
         for event in pg.event.get():
             if event.type == pg.QUIT:
-                salir = True
+                pg.quit()
         self.pantalla.fill((00, 99, 99))
         pg.display.flip()
