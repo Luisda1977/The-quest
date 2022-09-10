@@ -57,6 +57,11 @@ class Portada(Escena):
         self.pantalla.blit(texto, (pos_x, pos_y))
 
 class Levelone(Escena):
+    def __init__(self, pantalla: pg.Surface):
+        super().__init__(pantalla)
+        fondo_file = os.path.join("resources", "imagenes", "fondo2c.png")
+        self.fondo = pg.image.load(fondo_file)
+
     def bucle_principal(self):
      salir = False
      while not salir:
@@ -64,7 +69,11 @@ class Levelone(Escena):
             if event.type == pg.QUIT:
                 pg.quit()
         self.pantalla.fill((99, 99, 00))
+        self.pintar_fondo()
         pg.display.flip()
+
+    def pintar_fondo(self):
+        self.pantalla.blit(self.fondo, (0, 0))
 
 
 class Leveltwo(Escena):
