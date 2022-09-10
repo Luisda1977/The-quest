@@ -3,6 +3,7 @@ import os
 import pygame as pg
 
 from . import ALTO, ANCHO, COLOR_TITULO, COLOR_INSTRUCCIONES
+from .objetos import Cohete
 
 class Escena:
     def __init__(self, pantalla: pg.Surface):
@@ -61,6 +62,7 @@ class Levelone(Escena):
         super().__init__(pantalla)
         fondo_file = os.path.join("resources", "imagenes", "fondo2c.png")
         self.fondo = pg.image.load(fondo_file)
+        self.jugador = Cohete()
 
     def bucle_principal(self):
      salir = False
@@ -68,8 +70,11 @@ class Levelone(Escena):
         for event in pg.event.get():
             if event.type == pg.QUIT:
                 pg.quit()
-        self.pantalla.fill((99, 99, 00))
+
         self.pintar_fondo()
+
+        self.pantalla.blit(self.jugador.image, self.jugador.rect)
+
         pg.display.flip()
 
     def pintar_fondo(self):
@@ -91,6 +96,9 @@ class Leveltwo(Escena):
         self.pantalla.fill((99, 00, 99))
         self.pintar_fondo()
         pg.display.flip()
+
+    def pintar_fondo(self):
+        self.pantalla.blit(self.fondo, (0, 0))
 
 
 class Records(Escena):
