@@ -62,7 +62,7 @@ class Levelone(Escena):
         super().__init__(pantalla)
         fondo_file = os.path.join("resources", "imagenes", "fondo2c.png")
         self.fondo = pg.image.load(fondo_file)
-        self.jugador = Cohete()
+        self.cohete = Cohete()
 
     def bucle_principal(self):
      salir = False
@@ -73,7 +73,7 @@ class Levelone(Escena):
 
         self.pintar_fondo()
 
-        self.pantalla.blit(self.jugador.image, self.jugador.rect)
+        self.pantalla.blit(self.cohete.image, self.cohete.rect)
 
         pg.display.flip()
 
