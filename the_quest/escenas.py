@@ -17,7 +17,7 @@ class Portada(Escena):
        super().__init__(pantalla)
 
        font_file_titulo = os.path.join("resources", "fuentes", "SIXTY.TTF")
-       self.tipografia = pg.font.Font(font_file_titulo, 120)
+       self.tipografia = pg.font.Font(font_file_titulo, 100)
     """Preguntar lo de las tipografías"""
        #font_file_instrucciones = os.path.join("resources", "fuentes", "leadcoat.ttf")
        #self.tipografia = pg.font.Font(font_file_instrucciones, 80)
@@ -29,12 +29,14 @@ class Portada(Escena):
         for event in pg.event.get():
             if event.type == pg.KEYDOWN and event.key == pg.K_SPACE:
                     salir = True
-
             if event.type == pg.QUIT:
                 pg.quit()
+
         self.pantalla.fill((99, 99, 99))
+
         self.pintar_titulo()
         self.pintar_instrucciones()
+        
         pg.display.flip()
 
 
